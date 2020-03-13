@@ -426,9 +426,11 @@ var ApiKeyAuth = (function () {
 exports.ApiKeyAuth = ApiKeyAuth;
 var OAuth = (function () {
     function OAuth() {
-        this.tokenUrl = '';
+        this.tokenUrl = 'https://auth.logicdrop.io/oauth/token';
         this.clientId = '';
         this.clientSecret = '';
+        this.username = '';
+        this.password = '';
         this.accessToken = '';
         this.accessTokenExpiration = 0;
     }
@@ -450,14 +452,20 @@ var OAuth = (function () {
     };
     OAuth.prototype.obtainToken = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var url_1, result;
+            var requestBody_1, result;
+            var _this = this;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
                         if (!(!this.accessToken || (this.accessTokenExpiration && new Date().getTime() >= this.accessTokenExpiration))) return [3, 2];
-                        url_1 = "https://" + this.clientId + ":" + this.clientSecret + "@" + this.tokenUrl + "?grant_type=client_credentials";
+                        requestBody_1 = {
+                            client_id: "rLxjriMyfD3PAdXTQfFyKFUODrseHvSg",
+                            username: this.username,
+                            password: this.password,
+                            grant_type: "password"
+                        };
                         return [4, (new Promise(function (resolve, reject) {
-                                localVarRequest.post(url_1, { json: true }, function (err, res, body) {
+                                localVarRequest.post(_this.tokenUrl, { json: true, body: requestBody_1 }, function (err, res, body) {
                                     if (body) {
                                         resolve(body);
                                     }

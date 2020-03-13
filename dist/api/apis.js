@@ -41,8 +41,6 @@ __export(require("./queryServicesApi"));
 var queryServicesApi_1 = require("./queryServicesApi");
 __export(require("./schemaServicesApi"));
 var schemaServicesApi_1 = require("./schemaServicesApi");
-__export(require("./securityServicesApi"));
-var securityServicesApi_1 = require("./securityServicesApi");
 __export(require("./templateServicesApi"));
 var templateServicesApi_1 = require("./templateServicesApi");
 var HttpError = (function (_super) {
@@ -58,5 +56,5 @@ var HttpError = (function (_super) {
     return HttpError;
 }(Error));
 exports.HttpError = HttpError;
-exports.APIS = [adminServicesApi_1.AdminServicesApi, cacheServicesApi_1.CacheServicesApi, clientServicesApi_1.ClientServicesApi, computeServicesApi_1.ComputeServicesApi, contentServicesApi_1.ContentServicesApi, dataServicesApi_1.DataServicesApi, emailServicesApi_1.EmailServicesApi, kioskServicesApi_1.KioskServicesApi, officeServicesApi_1.OfficeServicesApi, packageServicesApi_1.PackageServicesApi, platformServicesApi_1.PlatformServicesApi, projectServicesApi_1.ProjectServicesApi, queryServicesApi_1.QueryServicesApi, schemaServicesApi_1.SchemaServicesApi, securityServicesApi_1.SecurityServicesApi, templateServicesApi_1.TemplateServicesApi];
+exports.APIS = [adminServicesApi_1.AdminServicesApi, cacheServicesApi_1.CacheServicesApi, clientServicesApi_1.ClientServicesApi, computeServicesApi_1.ComputeServicesApi, contentServicesApi_1.ContentServicesApi, dataServicesApi_1.DataServicesApi, emailServicesApi_1.EmailServicesApi, kioskServicesApi_1.KioskServicesApi, officeServicesApi_1.OfficeServicesApi, packageServicesApi_1.PackageServicesApi, platformServicesApi_1.PlatformServicesApi, projectServicesApi_1.ProjectServicesApi, queryServicesApi_1.QueryServicesApi, schemaServicesApi_1.SchemaServicesApi, templateServicesApi_1.TemplateServicesApi];
 //# sourceMappingURL=apis.js.map

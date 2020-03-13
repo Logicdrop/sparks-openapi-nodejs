@@ -1,7 +1,8 @@
 {
   "name": "@logicdrop/sparks-openapi-nodejs",
-  "version": "4.3.1",
+  "version": "4.3.2",
   "description": "Logicdrop Sparks NodeJS client",
+  "repository": "https://github.com/Logicdrop/sparks-openapi-nodejs",
   "main": "dist/api.js",
   "types": "dist/api.d.ts",
   "scripts": {

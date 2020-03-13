@@ -27,8 +27,6 @@ export * from './queryServicesApi';
 import { QueryServicesApi } from './queryServicesApi';
 export * from './schemaServicesApi';
 import { SchemaServicesApi } from './schemaServicesApi';
-export * from './securityServicesApi';
-import { SecurityServicesApi } from './securityServicesApi';
 export * from './templateServicesApi';
 import { TemplateServicesApi } from './templateServicesApi';
 import * as fs from 'fs';
@@ -47,4 +45,4 @@ export interface RequestDetailedFile {
     };
 }
 export declare type RequestFile = string | Buffer | fs.ReadStream | RequestDetailedFile;
-export declare const APIS: (typeof AdminServicesApi | typeof CacheServicesApi | typeof ClientServicesApi | typeof ComputeServicesApi | typeof ContentServicesApi | typeof DataServicesApi | typeof EmailServicesApi | typeof KioskServicesApi | typeof OfficeServicesApi | typeof PackageServicesApi | typeof PlatformServicesApi | typeof ProjectServicesApi | typeof QueryServicesApi | typeof SchemaServicesApi | typeof SecurityServicesApi | typeof TemplateServicesApi)[];
+export declare const APIS: (typeof AdminServicesApi | typeof CacheServicesApi | typeof ClientServicesApi | typeof ComputeServicesApi | typeof ContentServicesApi | typeof DataServicesApi | typeof EmailServicesApi | typeof KioskServicesApi | typeof OfficeServicesApi | typeof PackageServicesApi | typeof PlatformServicesApi | typeof ProjectServicesApi | typeof QueryServicesApi | typeof SchemaServicesApi | typeof TemplateServicesApi)[];

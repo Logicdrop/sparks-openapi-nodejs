@@ -26,8 +26,6 @@ export * from './queryServicesApi';
 import { QueryServicesApi } from './queryServicesApi';
 export * from './schemaServicesApi';
 import { SchemaServicesApi } from './schemaServicesApi';
-export * from './securityServicesApi';
-import { SecurityServicesApi } from './securityServicesApi';
 export * from './templateServicesApi';
 import { TemplateServicesApi } from './templateServicesApi';
 import * as fs from 'fs';
@@ -50,4 +48,4 @@ export interface RequestDetailedFile {
 
 export type RequestFile = string | Buffer | fs.ReadStream | RequestDetailedFile;
 
-export const APIS = [AdminServicesApi, CacheServicesApi, ClientServicesApi, ComputeServicesApi, ContentServicesApi, DataServicesApi, EmailServicesApi, KioskServicesApi, OfficeServicesApi, PackageServicesApi, PlatformServicesApi, ProjectServicesApi, QueryServicesApi, SchemaServicesApi, SecurityServicesApi, TemplateServicesApi];
+export const APIS = [AdminServicesApi, CacheServicesApi, ClientServicesApi, ComputeServicesApi, ContentServicesApi, DataServicesApi, EmailServicesApi, KioskServicesApi, OfficeServicesApi, PackageServicesApi, PlatformServicesApi, ProjectServicesApi, QueryServicesApi, SchemaServicesApi, TemplateServicesApi];

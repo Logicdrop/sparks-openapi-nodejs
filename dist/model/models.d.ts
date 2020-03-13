@@ -92,6 +92,8 @@ export declare class OAuth implements Authentication {
     tokenUrl: string;
     clientId: string;
     clientSecret: string;
+    username: string;
+    password: string;
     private accessToken;
     private accessTokenExpiration;
     applyToRequest(requestOptions: localVarRequest.Options): Promise<void>;

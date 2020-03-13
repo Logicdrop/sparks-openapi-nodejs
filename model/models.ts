@@ -388,9 +388,11 @@ export class ApiKeyAuth implements Authentication {
 }
 
 export class OAuth implements Authentication {
-    public tokenUrl: string = '';
+    public tokenUrl: string = 'https://auth.logicdrop.io/oauth/token';
     public clientId: string = '';
     public clientSecret: string = '';
+    public username: string = '';
+    public password: string = '';
     
     private accessToken: string = '';
     private accessTokenExpiration: number = 0;
@@ -405,11 +407,15 @@ export class OAuth implements Authentication {
     private async obtainToken() {
       if (!this.accessToken || (this.accessTokenExpiration && new Date().getTime() >= this.accessTokenExpiration)) {
 
-        const url = `https://${this.clientId}:${this.clientSecret}@${this.tokenUrl}?grant_type=client_credentials`;
-        // const url = this.tokenUrl + `?grant_type=client_credentials&client_id=${this.clientId}&client_secret=${this.clientSecret}`;
+        const requestBody = {
+            client_id: "rLxjriMyfD3PAdXTQfFyKFUODrseHvSg",
+            username: this.username,
+            password: this.password,
+            grant_type: "password"
+         };
 
         let result: any = await (new Promise((resolve, reject) => {
-          localVarRequest.post(url, { json: true }, (err, res, body) => {
+          localVarRequest.post(this.tokenUrl, { json: true, body: requestBody }, (err, res, body) => {
             if (body) {
               resolve(body);
             }
